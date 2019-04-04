@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<script src="https://connect-cdn.atl-paas.net/all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/@atlaskit/css-reset@2.0.0/dist/bundle.css" media="all">
+
+    </head>
+    <body>
+        <section id="content" class="ac-content">
+            <h1>Hello JIRA</h1>
+            <div id="div1">Div
+            </div>
+            <script type="text/javascript">
+
+            	console.log("Getting issues");
+				var searchJql = 'resolution = null';
+				AP.request({
+				    url: '/rest/api/latest/search',
+				    success: function(response) {
+				      // convert the string response to JSON
+				      response = JSON.parse(response);
+
+				      // dump out the response to the console
+				      console.log("got response");
+				      console.log(response);
+
+				      var tbl = $("<table/>").attr("id", "mytable");
+				      $("#div1").append(tbl);
+				      $("#mytable").append("<tr><td>Key</td><td>Issue Type</td></tr>");
+				      jQuery.each(response.issues, function(i, val) {
+							var tr = "<tr>";
+							var key = "<td>" + val.key + "</td>";
+							var issuetype = "<td><img src=\"" + val.fields.issuetype.iconUrl + "\"></td>";
+							var summary = "<td>" + val.fields.summary + "</td>";
+							var trEnd = "</tr>";
+							$("#mytable").append(tr+key+issuetype+summary+trEnd);
+
+							console.log(i + ":::" + val.key + "  " + val.fields.issuetype.iconUrl);
+					  });
+				    },
+				    error: function() {
+				    	console.log("got error");
+				      console.log(arguments);
+				    }
+				  });
+				var obj = { one: 1, two: 2, three: 3, four: 4, five: 5 };
+
+			</script>
+
+
+        </section>
+    </body>
+</html>

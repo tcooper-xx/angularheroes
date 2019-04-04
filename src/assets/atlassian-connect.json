@@ -1,0 +1,28 @@
+{
+ "name": "Hello World",
+ "description": "Atlassian Connect app",
+ "key": "com.example.myapp",
+ "baseUrl": "http://angulartourofheroes-20190404084943-hostingbucket-dev.s3-website.us-east-2.amazonaws.com",
+ "scopes": ["READ"],
+ "vendor": {
+     "name": "Example, Inc.",
+     "url": "http://example.com"
+ },
+ "version": "1.0.1",
+ "authentication": {
+     "type": "none"
+ },
+ "apiVersion": 1,
+ "modules": {
+     "generalPages": [
+         {
+             "url": "/report",
+             "key": "hello-world",
+             "location": "system.top.navigation.bar",
+             "name": {
+                 "value": "Greetings!"
+             }
+         }
+     ]
+ }
+}

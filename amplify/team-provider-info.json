@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "angulartourofheroes-20190404074802-authRole",
+            "UnauthRoleArn": "arn:aws:iam::241899644095:role/angulartourofheroes-20190404074802-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::241899644095:role/angulartourofheroes-20190404074802-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "angulartourofheroes-20190404074802-deployment",
+            "UnauthRoleName": "angulartourofheroes-20190404074802-unauthRole",
+            "StackName": "angulartourofheroes-20190404074802",
+            "StackId": "arn:aws:cloudformation:us-east-2:241899644095:stack/angulartourofheroes-20190404074802/e2cd8d30-56d7-11e9-98eb-0a2103992610"
+        }
+    }
+}
