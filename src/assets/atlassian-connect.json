@@ -2,7 +2,7 @@
  "name": "Hello World",
  "description": "Atlassian Connect app",
  "key": "com.example.myapp",
- "baseUrl": "http://angulartourofheroes-20190404084943-hostingbucket-dev.s3-website.us-east-2.amazonaws.com",
+ "baseUrl": "https://master.d2g2kx35gka4a9.amplifyapp.com",
  "scopes": ["READ"],
  "vendor": {
      "name": "Example, Inc.",
